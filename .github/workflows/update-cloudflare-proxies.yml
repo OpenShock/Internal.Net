@@ -4,6 +4,10 @@ on:
   schedule:
     - cron: '0 0 1 * *' # runs at 00:00 UTC on the 1st day of every month
   workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/update-cloudflare-proxies.yml'
+      - 'Common/CloudflareIPs.targets'
 
 jobs:
   update-proxies:
@@ -15,9 +19,11 @@ jobs:
           ref: ${{ github.ref }}
 
       - uses: actions/setup-dotnet@9a946fdbd5fb07b82b2f5a4466058b876ab72bb2  # v5.3.0
+        with:
+          global-json-file: global.json
 
-      - name: Build to regenerate Cloudflare IPs
-        run: dotnet build Common/Common.csproj
+      - name: Regenerate Cloudflare IPs source
+        run: dotnet build Common/Common.csproj -p:UpdateCloudflareIPs=true
 
       - name: Commit and Push Changes
         run: |
