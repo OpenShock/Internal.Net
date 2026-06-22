@@ -41,7 +41,7 @@ jobs:
       - name: Build
         run: >
           dotnet build --configuration Release --no-restore
-          -p:Version=${{ steps.version_step.outputs.nuGetVersionV2 }}
+          -p:Version=${{ steps.version_step.outputs.semVer }}
           -p:AssemblyVersion=${{ steps.version_step.outputs.assemblySemVer }}
           -p:FileVersion=${{ steps.version_step.outputs.assemblySemFileVer }}
           -p:InformationalVersion=${{ steps.version_step.outputs.fullSemVer }}
@@ -53,7 +53,7 @@ jobs:
         run: >
           dotnet pack --configuration Release --no-build
           -o ${{ runner.temp }}/nupkgs
-          -p:Version=${{ steps.version_step.outputs.nuGetVersionV2 }}
+          -p:Version=${{ steps.version_step.outputs.semVer }}
 
       - name: Push to GitHub Packages
         run: >
