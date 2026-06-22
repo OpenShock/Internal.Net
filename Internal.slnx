@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="Internal.Common\Internal.Common.csproj" Type="Classic C#" />
+  <Project Path="Internal.AspNet\Internal.AspNet.csproj" Type="Classic C#" />
+  <Project Path="Internal.Common.Tests\Internal.Common.Tests.csproj" Type="Classic C#" />
+  <Project Path="Internal.DynamicLinq\Internal.DynamicLinq.csproj" Type="Classic C#" />
+  <Project Path="Internal.DynamicLinq.Tests\Internal.DynamicLinq.Tests.csproj" Type="Classic C#" />
+</Solution>

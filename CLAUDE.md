@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-OpenShock Common .NET library — shared utilities for the OpenShock ecosystem. Contains two main libraries: **Common** (utilities, validation, crypto, geolocation) and **DynamicLinq** (dynamic LINQ query builder for PostgreSQL/EF Core).
+OpenShock.Internal — internal shared .NET libraries for the OpenShock backend (consumed by API and other OpenShock services, not intended for third-party consumers). Contains **Internal.Common** (utilities, validation, crypto, geolocation), **Internal.AspNet** (ASP.NET Core extensions), and **Internal.DynamicLinq** (dynamic LINQ query builder for PostgreSQL/EF Core).
 
 ## Build Commands
 
@@ -16,8 +16,8 @@ dotnet build
 dotnet test
 
 # Run a single test project
-dotnet test Common.Tests/Common.Tests.csproj
-dotnet test DynamicLinq.Tests/DynamicLinq.Tests.csproj
+dotnet test --project Internal.Common.Tests/Internal.Common.Tests.csproj
+dotnet test --project Internal.DynamicLinq.Tests/Internal.DynamicLinq.Tests.csproj
 
 # CI-style build + test
 dotnet build --configuration Release && dotnet test --configuration Release --no-build
@@ -27,12 +27,13 @@ No separate lint command — warnings are treated as errors in Debug configurati
 
 ## Solution Structure
 
-- **Common/** — Main utility library (NuGet package output)
-- **Common.Tests/** — Unit tests for Common
-- **DynamicLinq/** — Dynamic LINQ expression builder targeting PostgreSQL via EF Core
-- **DynamicLinq.Tests/** — Tests for DynamicLinq (uses Testcontainers with PostgreSQL)
+- **Internal.Common/** — Main utility library (`OpenShock.Internal.Common`)
+- **Internal.AspNet/** — ASP.NET Core extensions (`OpenShock.Internal.AspNet`)
+- **Internal.Common.Tests/** — Unit tests for Internal.Common
+- **Internal.DynamicLinq/** — Dynamic LINQ expression builder targeting PostgreSQL via EF Core
+- **Internal.DynamicLinq.Tests/** — Tests for Internal.DynamicLinq (uses Testcontainers with PostgreSQL)
 
-Solution file: `Common.slnx`
+Solution file: `Internal.slnx`
 
 ## Build Configuration
 

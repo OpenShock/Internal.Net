@@ -45,8 +45,8 @@ jobs:
       shell: bash
       run: |
         dotnet restore
-        dotnet publish Common/Common.csproj -c Release
-        dotnet publish DynamicLinq/DynamicLinq.csproj -c Release
+        dotnet publish Internal.Common/Internal.Common.csproj -c Release
+        dotnet publish Internal.DynamicLinq/Internal.DynamicLinq.csproj -c Release
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@8aad20d150bbac5944a9f9d289da16a4b0d87c1e  # v4.36.2

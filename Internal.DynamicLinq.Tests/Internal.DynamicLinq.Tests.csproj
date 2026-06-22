@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\Internal.DynamicLinq\Internal.DynamicLinq.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Testcontainers.PostgreSql" />
+    <PackageReference Include="Bogus" />
+    <PackageReference Include="TUnit" />
+  </ItemGroup>
+</Project>
