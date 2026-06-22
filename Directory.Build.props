@@ -3,7 +3,7 @@
     <Company>OpenShock</Company>
     <Product>$(Company).$(MSBuildProjectName)</Product>
     <!-- Local/dev fallback. The publish workflow overrides Version, AssemblyVersion,
-         FileVersion, and InformationalVersion with values computed by GitVersion. -->
+         FileVersion, and InformationalVersion with the value from the release tag. -->
     <Version>1.0.0</Version>
 
     <Title>$(Product)</Title>

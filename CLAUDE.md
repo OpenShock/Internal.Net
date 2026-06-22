@@ -41,7 +41,7 @@ Solution file: `Internal.slnx`
 - Nullable reference types enabled globally
 - Central package management via `Directory.Packages.props`
 - `Directory.Build.props` enables implicit usings, XML docs, and treats warnings as errors in Debug
-- GitVersion used in CI for semantic versioning (requires full git history)
+- Versioning is tag-driven: pushing a `v*` tag triggers the publish workflow, which uses the tag name as the package version
 
 ## Testing
 
