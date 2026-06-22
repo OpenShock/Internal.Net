@@ -6,8 +6,8 @@
 
     <Title>$(Product)</Title>
     <Authors>OpenShock</Authors>
-    <Description>Common library for all .NET solutions within OpenShock</Description>
-    <RepositoryUrl>https://github.com/OpenShock/DotNet.Internal</RepositoryUrl>
+    <Description>Internal shared .NET libraries for the OpenShock backend</Description>
+    <RepositoryUrl>https://github.com/OpenShock/Internal.Net</RepositoryUrl>
     <PackageProjectUrl>https://openshock.org</PackageProjectUrl>
     <PackageId>$(Product.Replace(" ", "_"))</PackageId>
     <PackageReadmeFile>README.md</PackageReadmeFile>

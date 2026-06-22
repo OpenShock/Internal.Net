@@ -1,6 +1,12 @@
-# OpenShock Common .NET library
+# OpenShock.Internal
 
-Common library for all .NET solutions within OpenShock
+Internal shared .NET libraries for the OpenShock backend, consumed by the API and other OpenShock services. Not intended for third-party use.
+
+## Libraries
+
+- **OpenShock.Internal.Common** — utilities, validation, crypto, geo
+- **OpenShock.Internal.AspNet** — ASP.NET Core extensions
+- **OpenShock.Internal.DynamicLinq** — dynamic LINQ for PostgreSQL/EF Core
 
 ## Support development!
 
