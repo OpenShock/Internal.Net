@@ -1,6 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Library</OutputType>
+    <Description>Dynamic LINQ query builder for PostgreSQL via EF Core, used by the OpenShock backend.</Description>
   </PropertyGroup>
 
   <ItemGroup>
