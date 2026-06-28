@@ -5,8 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="BCrypt.Net-Next" />
-    <PackageReference Include="OpenShock.Serialization.Flatbuffers" />
     <PackageReference Include="Semver" />
     <PackageReference Include="OneOf" />
     <PackageReference Include="Serilog" />
