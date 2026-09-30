@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <PackageReference Include="Semver" />
-    <PackageReference Include="OneOf" />
     <PackageReference Include="Serilog" />
   </ItemGroup>
 
