@@ -37,7 +37,7 @@ Solution file: `Internal.slnx`
 
 ## Build Configuration
 
-- .NET 10.0, latest C# language version
+- .NET 11.0 (C# 15 via `LangVersion=Latest`), runtime-native async (`runtime-async=on`)
 - Nullable reference types enabled globally
 - Central package management via `Directory.Packages.props`
 - `Directory.Build.props` enables implicit usings, XML docs, and treats warnings as errors in Debug
