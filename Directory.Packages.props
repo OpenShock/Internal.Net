@@ -11,6 +11,6 @@
     <PackageVersion Include="Serilog" Version="4.4.0" />
     <PackageVersion Include="Testcontainers.PostgreSql" Version="4.15.0" />
     <PackageVersion Include="Testcontainers.Redis" Version="4.14.0" />
-    <PackageVersion Include="TUnit" Version="1.68.17" />
+    <PackageVersion Include="TUnit" Version="1.71.0" />
   </ItemGroup>
 </Project>
